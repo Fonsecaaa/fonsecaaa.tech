@@ -1,65 +1,108 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site pessoal de Fonseca, aluno de Engenharia de Telecomunicações e Informática">
-    <title>Fonseca | Engenharia de Telecomunicações e Informática</title>
+    <!-- Definindo o Favicon -->
+    <link rel="icon" href="codigo.png" type="image/codigo"> <!-- Caso a imagem esteja na raiz -->
+    
+    <!-- Ou, caso esteja em uma pasta 'images' -->
+    <!-- <link rel="icon" href="images/o-circuito" type="image/x-icon"> -->
+    <meta name="description" content="Minimalist personal site of Fonseca, student of Telecommunications and Informatics Engineering.">
+    <title>Fonseca | X</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Tamanho dos ícones sociais no footer */
+        footer .social-icon img {
+            width: 24px;  /* Altere para o tamanho desejado */
+            height: 24px; /* Mantém a proporção das imagens */
+            transition: transform 0.3s ease-in-out; /* Transição suave ao passar o mouse */
+        }
+
+        footer .social-icon:hover img {
+            transform: scale(1.2); /* Aumenta ligeiramente o ícone quando o mouse passa sobre ele */
+        }
+    </style>
+
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <h1 class="logo"><a href="#home">Fonseca</a></h1>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#contact">Contacts</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- Navbar -->
+<header class="navbar" id="navbar">
+    <div class="container">
+        <h1 class="logo">João Fonseca</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <li><a href="#hobbies/interests">Hobbies/Interests</a></li>
+                <li><a href="#challenge">CyberChallenge</a></li>
+            </ul>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</header>
+
+    <!-- Sections -->
     <main>
         <section id="home" class="section">
-            <div class="container">
-                <h2>Bem-vindo ao Meu Site!</h2>
-                <p>Sou estudante de Engenharia de Telecomunicações e Informática, apaixonado por tecnologia e inovação.</p>
-            </div>
+            <h2>Welcome</h2>
+            <p>Minimalist site designed to showcase my work and achievements.</p>
         </section>
         <section id="about" class="section">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>Olá! Estou no 3º ano de Engenharia de Telecomunicações e Informática e sou Diretor do Departamento de Gestão do NEETI. Gosto de liderar, criar e inovar.</p>
-            </div>
+            <h2>About Me</h2>
+            <p>I'm a Telecommunications and Informatics Engineering student, passionate about innovation and problem-solving.</p>
         </section>
         <section id="work" class="section">
-            <div class="container">
-                <h2>Work</h2>
-                <p>Veja abaixo alguns dos meus projetos:</p>
-                <ul>
-                    <li><strong>Projeto 1:</strong> Sistema de comunicação IoT para casas inteligentes.</li>
-                    <li><strong>Projeto 2:</strong> Plataforma de gestão para o NEETI.</li>
-                    <li><strong>Projeto 3:</strong> Desenvolvimento de algoritmos para redes 5G.</li>
-                </ul>
-            </div>
+            <h2>Work</h2>
+            <p>Here are some of the projects I've worked on:</p>
+            <ul>
+                <li>IoT Communication Systems</li>
+                <li>Management Platforms for NEETI</li>
+                <li>5G Network Algorithms</li>
+            </ul>
         </section>
         <section id="contact" class="section">
-            <div class="container">
-                <h2>Contacts</h2>
-                <p>Entre em contato comigo:</p>
-                <ul>
-                    <li>Email: <a href="mailto:contato@fonsecaaa.tech">contato@fonsecaaa.tech</a></li>
-                    <li>LinkedIn: <a href="https://linkedin.com/in/fonsecaaa" target="_blank">linkedin.com/in/fonsecaaa</a></li>
-                </ul>
-            </div>
+            <h2>Contacts</h2>
+            <p>Feel free to reach out:</p>
+            <ul>
+                <li>Email: <a href="mailto:V">franciscoloureirofonseca@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/joaofonseca04/" target="_blank">linkedin.com/in/joaofonseca04</a></li>
+            </ul>
         </section>
+    </section>
+    <section id="CyberChallenge" class="section">
+        <h2>CyberChallenge</h2>
+        <p>Ready for the challenge?</p>
+        <ul>
+           ???
+        </ul>
+    </section>
     </main>
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Fonseca | Todos os direitos reservados.</p>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social">
+            </a>
+            <a href="https://www.linkedin.com/in/joaofonseca04/" target="_blank" class="social-icon">
+                <img src="linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="franciscoloureirofonseca@gmail.com" target="_blank" class="social-icon">
+                <img src="gmail.png" alt="Gmail">
+            </a>
+            <a href="https://github.com/Fonsecaaa/" target="_blank" class="social-icon">
+                <img src="github.png" alt="GitHub">
+            </a>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

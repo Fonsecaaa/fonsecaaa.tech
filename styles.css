@@ -1,83 +1,173 @@
-/* Estilos gerais */
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #000;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
-/* Cabeçalho e Menu */
-.header {
-    background: #004080;
+/* Scroll suave para todas as ancoragens */
+html {
+    scroll-behavior: smooth; /* Rolagem suave */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0); /* Navbar transparente */
+    color: #000; /* Texto preto */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* A sombra ainda estará visível */
+    backdrop-filter: blur(5px); /* Efeito de desfoque de fundo */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave ao mudar o fundo */
 }
 
-.header .container {
-    width: 90%;
-    margin: auto;
+.navbar.white {
+    background: #fff; /* Navbar branca */
+    color: #000; /* Texto preto */
+}
+
+.navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.navbar .logo a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
+.nav-links {
+    display: flex; /* Alinha os itens na horizontal */
+    gap: 1.5rem; /* Espaço entre os itens */
+}
+
+.nav-links a {
+    color: #000; /* Texto preto na navbar */
     font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent; 
+    border-radius: 5px; 
+    transition: all 0.3s;
+    position: relative;
 }
 
-.nav-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 1.5rem;
+.nav-links a:hover {
+    border-color: #000; /* Outline preto ao passar o mouse */
+    background: rgba(0, 0, 0, 0.1); /* Fundo levemente transparente */
+    border-radius: 10px; /* Bordas arredondadas para o hover */
+    transition: all 0.7s ease-in-out; /* Transição suave */
 }
 
-.nav-menu a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s;
+/* Hamburger Menu */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-.nav-menu a:hover {
-    color: #ffd700;
+.nav-toggle .line {
+    width: 25px;
+    height: 3px;
+    background: #000;
 }
 
 /* Seções */
 .section {
-    padding: 6rem 0;
+    padding: 6rem 1rem;
     text-align: center;
+    position: relative;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-/* Rodapé */
-.footer {
-    background: #333;
-    color: white;
+.section p,
+.section ul {
+    font-size: 1.2rem;
+}
+
+/* Linha de separação entre as seções */
+.section:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000; /* Cor da linha */
+    margin: 4rem 0; /* Espaçamento acima e abaixo da linha */
+}
+
+/* Footer */
+footer {
     text-align: center;
     padding: 1rem 0;
+    background: #000;
+    color: #fff;
+    margin-top: 2rem;
 }
 
-.footer a {
-    color: #ffd700;
-    text-decoration: none;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* Alinha os itens na vertical */
+        background: rgba(0, 0, 0, 0.9); /* Fundo para dispositivos móveis */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        display: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+/* Estilos para os ícones sociais no rodapé */
+footer .social {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os ícones */
+    padding: 10px 0;
 }
 
-/* Estilo de ancoragem suave */
-html {
-    scroll-behavior: smooth;
+/* Tamanho dos ícones sociais no footer */
+footer .social-icon img {
+    width: 24px;  /* Altere para o tamanho desejado */
+    height: 24px; /* Mantém a proporção das imagens */
+    transition: transform 0.3s ease-in-out; /* Transição suave ao passar o mouse */
+}
+
+footer .social-icon:hover img {
+    transform: scale(1.2); /* Aumenta ligeiramente o ícone quando o mouse passa sobre ele */
+}
+
+
 }
